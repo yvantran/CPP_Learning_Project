@@ -52,7 +52,7 @@ Il faut également penser à le supprimer de cette liste avant de le détruire.
 Que pourriez-vous faire afin que l'ajout et la suppression de la liste soit "automatiquement gérée" lorsqu'un `Displayable` est créé ou détruit ?
 Faites de même pour `DynamicObject`.
 
-6) Le Tower a besoin de stocker pour tout `Aircraft` qui est actuellement affecté à un `Terminal` ce `Terminal` afin de pouvoir le "liberer" dès que son avion decollera. Cette affection prend actuellement la forme d'un `std::vector<std::pair<const Aircraft*, size_t>>` mais la recherche d'un avion dans ce vector prend temps lineaire (en nombre de `Terminal`s existant). C'est pas grave autant que ce nombre est petit, mais pour être préparé pour l'avenir, on aimerait bien remplacer le vector par une affection qui reste efficace même en cas de beaucoup de `Terminal`s. Changez le code afin qu'il utilise un containeur STL plus adapté (notamment, la fonction `find_craft_and_terminal(const Aicraft&)` ne sera plus necessaire).
+6) Le Tower a besoin de stocker pour tout `Aircraft` qui est actuellement affecté à un `Terminal` l'index de ce `Terminal` afin de pouvoir le "liberer" dès que son avion decollera. Cette affection prend actuellement la forme d'un `std::vector<std::pair<const Aircraft*, size_t>>` mais la recherche d'un avion dans ce vector prend temps lineaire (en nombre de `Terminal`s existant). C'est pas grave autant que ce nombre est petit, mais pour être préparé pour l'avenir, on aimerait bien remplacer le vector par une affection qui reste efficace même en cas de beaucoup de `Terminal`s. Changez le code afin qu'il utilise un containeur STL plus adapté (notamment, la fonction `find_craft_and_terminal(const Aicraft&)` ne sera plus necessaire).
 
 
 ## Theorie
