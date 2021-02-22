@@ -57,7 +57,7 @@ Faites de même pour `DynamicObject`.
 
 ## Theorie
 
-En régardant le contenu de la fonction `void aircraft::turn(Point3D direction)`,
+En régardant le contenu de la fonction `void Aircraft::turn(Point3D direction)`,
 pouvez-vous dire pourquoi on a choisi de ne pas passer une réference?
 Arrivez-vous à eviter copier le `Point3D` donné?
 
