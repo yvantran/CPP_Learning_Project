@@ -15,7 +15,7 @@ private:
     static inline const char ALT_SEPARATOR = '/';
 #endif
 
-    std::string value;
+    std::string value{};
 
 public:
     Path()
