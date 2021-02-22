@@ -47,10 +47,10 @@ Essayez maintenant de mettre en pause le programme en manipulant ce framerate. Q
 4) Lorsqu'un avion décolle, celui-ci n'est pas retiré du programme.
 Faites en sorte qu'il le soit.
 
-5) Lorsqu'un objet de type Displayable est créé, il faut ajouter celui-ci manuellement dans la liste des objets à afficher.
+5) Lorsqu'un objet de type `Displayable` est créé, il faut ajouter celui-ci manuellement dans la liste des objets à afficher.
 Il faut également penser à le supprimer de cette liste avant de le détruire.
-Que pourriez-vous faire afin que l'ajout et la suppression de la liste soit "automatiquement gérée" lorsqu'un Displayable est créé ou détruit ?
-Faites de même pour DynamicObject.
+Que pourriez-vous faire afin que l'ajout et la suppression de la liste soit "automatiquement gérée" lorsqu'un `Displayable` est créé ou détruit ?
+Faites de même pour `DynamicObject`.
 
 6) Le Tower a besoin de stocker pour tout `Aircraft` qui est actuellement affecté à un `Terminal` afin de "liberer" ce terminal dès que son avion decollera. Cette affection prend actuellement la forme d'un `std::vector<std::pair<const Aircraft*, size_t>>` mais la recherche d'un avion dans ce vector prend temps lineaire (en nombre de `Terminal`s existant). C'est pas grave autant que ce nombre est petit, mais pour être préparé pour l'avenir, on aimerait bien remplacer le vector par une affection qui reste efficace même en cas de beaucoup de `Terminal`s. Changez le code afin qu'il utilise un containeur STL plus adapté (notamment, la fonction `find_craft_and_terminal(const Aicraft&)` ne sera plus necessaire).
 
@@ -69,4 +69,3 @@ Si on augmente le nombre de ces executions par seconde, on accelere du coup le t
 Faites en sorte que c'est plus le cas, i. e. le changement du framerate n'aura aucune influence sur la vitesse des avions, temps de débarquement, etc.
 Vu qu'on va plus pouvoir controler le passage de temps dans la simulation avec le framerate,
 ajoutez deux nouveaux inputs au programme permettant d'accelerer ou ralentir la simulation (controle du temps "simulé" qui se passe entre deux executions de `move()`).
-
