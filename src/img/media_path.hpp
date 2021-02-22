@@ -15,13 +15,10 @@ private:
     static inline const char ALT_SEPARATOR = '/';
 #endif
 
-    std::string value{};
+    std::string value;
 
 public:
-    Path()
-    {}
-
-    Path(const std::string_view value_) : value { value_ }
+    Path(const std::string_view value_ = {}) : value { value_ }
     {} 
 
     bool empty() const
