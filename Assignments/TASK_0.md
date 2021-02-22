@@ -57,7 +57,8 @@ Faites de même pour `DynamicObject`.
 
 ## Theorie
 
-En régardant le contenu de la fonction `void Aircraft::turn(Point3D direction)`,
+1) Comment a-t-on fait pour que person autre que le `Tower` peut reserver un terminal de l'aeroport?
+2) En régardant le contenu de la fonction `void Aircraft::turn(Point3D direction)`,
 pouvez-vous dire pourquoi on a choisi de ne pas passer une réference?
 Arrivez-vous à eviter copier le `Point3D` donné?
 
