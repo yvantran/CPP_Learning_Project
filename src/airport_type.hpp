@@ -82,7 +82,7 @@ public:
     }
 };
 
-inline const AirportType one_lane_airport { { -.1f, -.3f, 0 },
-                                            { -.6f, .3f, 0 },
-                                            { { .3f, 0, 0 }, { -.3f, .3f, 0 }, { 0, .55f, 0 } },
-                                            { { { -.5f, -.75f, 0 } } } };
+inline const AirportType one_lane_airport { Point3D { -.1f, -.3f, 0 },
+                                            Point3D { -.6f, .3f, 0 },
+                                            { Point3D { .3f, 0, 0 }, Point3D { -.3f, .3f, 0 }, Point3D{ 0, .55f, 0 } },
+                                            { Runway { Point3D { -.5f, -.75f, 0 } } } };
