@@ -4,26 +4,24 @@ guide planes to land safely
 ### Requirements
 
 The following software is necessary to compile and run the program
-1. C++ compiler capable of compiling C++-17 code (for example, gcc version 8 or above)
-2. glut or freeglut
+1. C++ compiler capable of compiling C++17 code (for example, gcc version 8 or above)
+2. freeglut
 3. OpenGL version 1.1 or above
 4. CMake version 3 or above to generate the project
 
 ### Installation of FreeGLUT
 
-We recommand that you use FreeGLUT rather than GLUT, since the latter hasn't been updated since 1998, and its licence prevents anyone to do so.
-
 #### Linux
-just use your favorite package manager to install it (apt-get, snap, pacman, or whatever).
+Just use your favorite package manager to install it (apt-get, snap, pacman, or whatever).
 
 #### Mac
-install using the package manager (`brew`)
+Install using the package manager (`brew`).
 
-**attention**:
-for maxOS > 10.8, you'll need to install and run XQuartz
+**Attention**:
+For maxOS > 10.8, you'll need to install and run XQuartz.
 
-**troubleshoot**:
-If you get messages like `<some lib> was built for newer macOS version (XX) than being linked (XX)` try updating/installing `glut` avec brew!
+**Troubleshoot**:
+If you get messages like `<some lib> was built for newer macOS version (XX) than being linked (XX)` try updating/installing `freeglut` with brew!
 
 #### Windows
 Go to this [page](http://freeglut.sourceforge.net/) and select the latest stable release to get the source code.\
@@ -47,11 +45,3 @@ To build the program, it should be sufficient to enter the top-level directory a
 cmake .
 make
 ```
-
-### Default Keyboard Shortcuts
-|key | action |
-|----|--------|
-|x,q | exit   |
-|f   | toggle fullscreen |
-|+/- | zoom in/out|
-|c   | create random aircraft |

@@ -7,6 +7,7 @@
 #include "img/image.hpp"
 #include "img/media_path.hpp"
 
+#include <cassert>
 #include <cstdlib>
 #include <ctime>
 
@@ -93,4 +94,3 @@ void TowerSimulation::launch()
 
     GL::loop();
 }
-
