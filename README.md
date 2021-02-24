@@ -28,8 +28,8 @@ If you get messages like `<some lib> was built for newer macOS version (XX) than
 
 #### Windows
 
-Install the MSYS2 package manager by following the instruction on this page : https://www.msys2.org/.
-Once you have followed the instructions, you can install freeglut by tapping `pacman -S mingw-w64-x86_64-freeglut` in the MSYS2 console.
+Install the MSYS2 package manager by following the instructions on this page : https://www.msys2.org/.
+Once you have finished, you can install freeglut by tapping `pacman -S mingw-w64-x86_64-freeglut` in the MSYS2 console.
 
 Edit the "Path" environment variable (the user or system one):
 1. Add "C:\msys64\mingw64\bin" to it (if you installed MSYS2 elsewhere, then update the path accordingly).
@@ -37,7 +37,7 @@ Edit the "Path" environment variable (the user or system one):
 
 Open the project inside VSCode.
 Run the command `Preferences: Open User Settings`.
-Search for the setting `Cmake: Mingw Search Dirs` and add `"C:\msys64\mingw64` to it (without the bin folder).
+Search for the setting `CMake: Mingw Search Dirs` and add `"C:\msys64\mingw64` to it (without the bin folder).
 Restart VSCode, run the command `CMake: Scan For Kits`, then `CMake: Edit User-Local CMake Kits`.
 Add the following code inside the JSON of the MSYS2 compilers:
 ```json
@@ -54,7 +54,7 @@ Restart VSCode again, and run `CMake: Configure`.
 
 You can build and execute the program from VSCode, as usual.
 
-Otherwise, to build it from a terminal, place yourself inside the top-level directory of the project, and use the following commands: 
+If you want to build it from a terminal, place yourself inside the top-level directory of the project, and use the following commands: 
 ```
 mkdir build
 cd build
