@@ -62,7 +62,6 @@ void TowerSimulation::create_keystrokes() const
     GL::keystrokes.emplace('m', []() { GL::ticks_per_sec++; });
 
     GL::keystrokes.emplace('p', []() { GL::setPause(); });
-
 }
 
 void TowerSimulation::display_help() const

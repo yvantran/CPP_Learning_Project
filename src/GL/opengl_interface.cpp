@@ -63,6 +63,8 @@ void display(void)
     glOrtho(-zoom, zoom, -zoom, zoom, 0.0f, 1.0f); // left, right, bottom, top, near, far
     glClear(GL_COLOR_BUFFER_BIT);
     glEnable(GL_TEXTURE_2D);
+
+    //enlever aircraft 
     for (const auto& item : display_queue)
     {
         item->display();
@@ -77,6 +79,9 @@ void timer(const int step)
     {
         for (auto& item : move_queue)
         {
+            if (item->toRemove){
+
+            }
             item->move();
         }
     }

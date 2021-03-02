@@ -51,6 +51,8 @@ void Aircraft::arrive_at_terminal()
     is_at_terminal = true;
 }
 
+
+
 // deploy and retract landing gear depending on next waypoints
 void Aircraft::operate_landing_gear()
 {
@@ -63,6 +65,12 @@ void Aircraft::operate_landing_gear()
         if (ground_before && !ground_after)
         {
             std::cout << flight_number << " lift off" << std::endl;
+
+            if (waypoints.empty()){
+                //notif qu'on supp l'aircraft
+                toRemove = true;
+            }
+
         }
         else if (!ground_before && ground_after)
         {
