@@ -66,16 +66,16 @@ void Aircraft::operate_landing_gear()
         {
             std::cout << flight_number << " lift off" << std::endl;
 
-            if (waypoints.empty()){
+            // if (waypoints.empty()){
                 //notif qu'on supp l'aircraft
-                toRemove = true;
-            }
+            // }
 
         }
         else if (!ground_before && ground_after)
         {
             std::cout << flight_number << " is now landing..." << std::endl;
             landing_gear_deployed = true;
+            has_landed = true;
         }
         else if (!ground_before && !ground_after)
         {
@@ -100,7 +100,12 @@ void Aircraft::move()
 {
     if (waypoints.empty())
     {
-        waypoints = control.get_instructions(*this);
+        if (has_landed && !is_at_terminal){
+                toRemove = true;
+        }
+        else {
+            waypoints = control.get_instructions(*this);
+        }
     }
 
     if (!is_at_terminal)
