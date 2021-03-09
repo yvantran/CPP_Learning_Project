@@ -79,19 +79,17 @@ void timer(const int step)
     {
         for (auto it = move_queue.begin(); it != move_queue.end();)
         {
-            auto* aircraft = *it;
-            if (aircraft->toRemove)
+            auto* dynamic_object = *it;
+            if (dynamic_object->toRemove)
             {
                 it = move_queue.erase(it);
-                delete aircraft;
+                delete dynamic_object;
             }
             else {
-                aircraft->move();
+                dynamic_object->move();
                 ++it;
             }
         }
-
-
         // for (auto& item : move_queue)
         // {
         //     item->move();

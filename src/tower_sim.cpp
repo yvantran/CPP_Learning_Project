@@ -22,6 +22,8 @@ TowerSimulation::TowerSimulation(int argc, char** argv) :
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
     GL::init_gl(argc, argv, "Airport Tower Simulation");
 
+    GL::move_queue.emplace(AircraftManager::GetInstance());
+
     create_keystrokes();
 }
 
